@@ -20,7 +20,7 @@ Stream<Double> randomStream = Stream.generate(Math::random);        // 람다식
 
 데이터소스 -> Stream -> 중간연산(0 ~ n번) -> 최종연산(0 ~ 1번)
 
-cheonggyecheon stream 청게천?
+cheonggyecheon stream 청계천?
 데이터의 연속적인 흐름을 Stream이라고 합니다.
 
 ## 연산의 종류
