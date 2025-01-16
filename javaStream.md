@@ -34,6 +34,7 @@ stream.limit(5);    // 스트림 자르기
 /* 최종연산 */
 stream.count();
 stream.forEach();
+collect();
 ```
 
 ## 스트림의 특징
