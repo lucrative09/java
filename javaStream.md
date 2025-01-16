@@ -88,5 +88,5 @@ if (logger.isDebugEnabled()) {
 return distincteDepts;
 ```
 
-## 스트림 중간연산자 sort 1
+## 스트림 API sort1
 - sorted​(Comparator<? super T> comparator)
