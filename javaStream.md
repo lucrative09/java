@@ -24,7 +24,7 @@ Stream<Double> randomStream = Stream.generate(Math::random);        // 람다식
 cheonggyecheon stream 청계천?
 데이터의 연속적인 흐름을 Stream이라고 한다.
 
-## 연산의 종류
+## 스트림 연산의 종류
 ```java
 /* 중간연산 */
 stream.filter();    // 걸러내기
@@ -87,3 +87,6 @@ if (logger.isDebugEnabled()) {
 }
 return distincteDepts;
 ```
+
+## 스트림 중간연산자 sort 1
+- sorted​(Comparator<? super T> comparator)
