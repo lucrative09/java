@@ -67,7 +67,7 @@ stream01.forEach(System.out::print);
 
 stream01.forEach(System.out::print); // 이대로 진행 시 스트림 이미 닫힘
 ```
-위의 소스내용과 같이 원본은 보존하고 읽는형태로 사용하는데 사내 소스에 적용되어 있는 내용이 있다.
+- 결재소스 내용 중 하나
 
 ```java
 CallStampAndSenderNameC.java
