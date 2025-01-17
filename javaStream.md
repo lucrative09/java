@@ -88,5 +88,5 @@ if (logger.isDebugEnabled()) {
 return distincteDepts;
 ```
 
-## 스트림 API sort1
+## 스트림 API sort
 - sorted​(Comparator<? super T> comparator)
