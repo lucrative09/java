@@ -79,13 +79,19 @@ public class TourPlan {
 ```
 2. Builder 인터페이스: TourPlanBuilder
 - 역할: TourPlanBuilder 인터페이스는 투어 계획 객체를 생성하기 위한 메서드를 정의합니다.
-- 메서드
+
 title(String title): 투어 제목을 설정하는 메서드
+
 nightsAndDays(int nights, int days): 숙박 일수와 여행 일수를 설정하는 메서드
+
 startDate(String startDate): 시작 날짜를 설정하는 메서드
+
 whereToStay(String where): 숙소 정보를 설정하는 메서드
+
 getPlan(): 최종적으로 구성된 TourPlan 객체를 반환하는 메서드
+
 - 각 메서드는 TourPlanBuilder를 반환하여 메서드 체이닝을 가능하게 합니다. 이를 통해 여러 설정을 연속적으로 할 수 있습니다.
+
 ```java
 public interface TourPlanBuilder {
     TourPlanBuilder title(String title);
@@ -161,12 +167,16 @@ public class Main {
     }
 }
 ```
-Product (TourPlan): 투어 정보를 담는 클래스.
-Builder 인터페이스 (TourPlanBuilder): 객체 생성 메서드를 정의.
-ConcreteBuilder (DefaultTourBuilder): 인터페이스를 구현하여 실제 객체 생성.
-클라이언트 (Main): 빌더를 사용하여 객체를 구성하고 생성.
-이러한 구조로 빌더 패턴을 사용하면, 복잡한 객체를 효율적으로 관리하고 생성할 수 있습니다. 각 구성 요소가 명확히 역할을 나누어 코드의 가독성과 유지보수성을 향상시킵니다.
+# 요약 정리
+- Product (TourPlan): 투어 정보를 담는 클래스.
+- Builder 인터페이스 (TourPlanBuilder): 객체 생성 메서드를 정의.
+- ConcreteBuilder (DefaultTourBuilder): 인터페이스를 구현하여 실제 객체 생성.
+- 클라이언트 (Main): 빌더를 사용하여 객체를 구성하고 생성.
+
+이러한 구조로 빌더 패턴을 사용하면, 복잡한 객체를 효율적으로 관리하고 생성할 수 있습니다. 
+
+각 구성 요소가 명확히 역할을 나누어 코드의 가독성과 유지보수성을 향상시킵니다.
 
 ## 결론
-빌더 패턴을 통해 코드 가독성 및 재사용성 향상
+빌더 패턴을 통해 코드 가독성 및 재사용성 향상 및
 객체 생성을 일관된 프로세스로 간소화
