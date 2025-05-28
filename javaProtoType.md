@@ -6,6 +6,33 @@
 복제 기능을 갖추고 있는 기존 인스턴스를 프로토타입으로 사용해 새 인스턴스를 만들 수 있다.
 
 
+## 프로토타입 예시
+```java
+GithubRepository repository = new GithubRepository();
+repository.setUser("Kimmoonki");
+repository.setName("live-study");
+```
+GithubRepository 객체를 생성하고, 사용자와 이름을 설정
+
+```java
+GithubIssue githubIssue = new GithubIssue(repository);
+githubIssue.setId(1);
+githubIssue.setTitle("1주차 과제: JVM은 무엇이며 자바 코드는 어떻게 실행하는 것인가.");
+```
+GithubIssue 객체를 생성하고, 해당 이슈의 ID와 제목을 설정
+
+```java
+GithubIssue clone = (GithubIssue) githubIssue.clone();
+System.out.println(clone.getUrl());
+```
+클론을 생성
+
+```java
+repository.setUser("Keesun");
+```
+원본 repository의 사용자 이름을 변경을 하였지만 이 변경은 clone 객체에 영향을 미치지 않음
+
+
 ```java
 System.out.println(clone != githubIssue);
 System.out.println(clone.equals(githubIssue));
@@ -13,9 +40,13 @@ System.out.println(clone.getClass() == githubIssue.getClass());
 System.out.println(clone.getRepository() == githubIssue.getRepository());
 ```
 clone과 githubIssue는 서로 다른 객체이므로 clone != githubIssue는 true입니다.
+
 clone.equals(githubIssue)는 두 객체가 동일한 값을 가지지 않기 때문에 false입니다.
+
 두 객체는 같은 클래스이므로 clone.getClass() == githubIssue.getClass()는 true입니다.
+
 clone.getRepository() == githubIssue.getRepository()는 false일 수 있습니다. 
+
 클론된 객체는 원본 레포지토리와 별도의 인스턴스를 가질 수 있습니다.
 
 ## 장점
